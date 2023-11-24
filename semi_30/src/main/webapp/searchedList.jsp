@@ -59,7 +59,7 @@
 					ProductDAO productDAO = new ProductDAO();
 					List<Product> products = productDAO.searchList(searchTitle);
 				%>
-	        	<h4>'<%= searchTitle %>'에 대한 검색 결과</h4>
+	        	<h4>'<%= searchTitle %>'에 대한 검색 결과 <%= searchTitle.length() -1 %> 건</h4>
 				<div class="searchList">
 					<%
 						for(Product p : products){
