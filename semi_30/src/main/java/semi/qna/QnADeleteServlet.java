@@ -17,8 +17,6 @@ import javax.servlet.http.HttpSession;
 @WebServlet("/QnADeleteServlet")
 public class QnADeleteServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// DELETE FROM BOARD_QNA WHERE ACCOUNT_ID = ?;
-		// HttpSession httpSession = request.getSession();
 		String jdbcURL = "jdbc:oracle:thin:@localhost:1521:XE";
 		String jdbcUsername = "thirties";
 		String jdbcPassword = "3030";
@@ -38,7 +36,7 @@ public class QnADeleteServlet extends HttpServlet {
 			QnADAO dao = new QnADAO();
 			int result =  dao.delete(qna_no);
 			
-			String deleteSql = "DELETE FROM board_qna WHERE qna_no = ?";
+			String deleteSql = "DELETE FROM board_qna WHERE qna_no = ? AND ";
 			ps = connection.prepareStatement(deleteSql);
 			ps.setInt(1, qna_no);
 			

@@ -55,9 +55,9 @@
 		        </div>
 				<div class="contents">
 					<div class="sidebar">
-						<table id="topQnA" style="width: 250px; height: 400px; border : none; font-weight: bold;">
+						<table id="topQnA">
 							<tr>
-								<th style="color: #75c945;text-shadow:0.5px 0.5px 0.5px #000;text-align: center; font-size:13pt;"><img src="img/gazi.png">자주 묻는 질문 TOP10<img src="img/gazi.png"></th>
+								<th id = "top"><img src="img/gazi.png">자주 묻는 질문 TOP10<img src="img/gazi.png"></th>
 							</tr>
 							<tr>
 								<td><a id="listlink" href="QnADetail.jsp?qnaNo=1">1. 비밀번호를 변경하고 싶어요.</a></td>
@@ -107,7 +107,7 @@
 									
 									for(QnAVO qna : qnas){
 						%>
-						<tr style="  border-bottom: 1px solid rgba(0,0,0,.1);">
+						<tr style="border-bottom: 1px solid rgba(0,0,0,.1);">
 							<td style="text-align:center;padding:8px;"> <%= qna.getQnaNo() %> </td>
 							<td style="padding:8px;"><a id="listlink" href="QnADetail.jsp?qnaNo=<%=qna.getQnaNo()%>"> <%= qna.getQnaTitle() %> </td>
 							<td style="text-align:center;padding:8px;"><a id="listlink" href="QnADetail.jsp?qnaNo=<%=qna.getQnaNo()%>"> <%= qna.getAccountID() %> </td>

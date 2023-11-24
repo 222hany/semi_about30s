@@ -53,7 +53,7 @@
 		<div class="main">
 			<form action="QnAPostServlet" method="post"> <!--form action="QnAPostServlet" method="post" enctype="multipart/form-data"-->
 				<input type="hidden" id="user_name" name="user_name" value="<%=user_name%>">
-				<table border="1" style="width:90%; border-collapse:collapse; vertical-align: middle; margin-top:40px; margin-left:50px; margin-bottom:20px;"">
+				<table border="1" id="detailTable">
 				<!-- input type="text" id="ACCOUNT_ID" name="ACCOUNT_ID" placeholder="아이디" required -->
 					<tr>
 						<th style="padding:15px;">제목</th>

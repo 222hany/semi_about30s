@@ -62,7 +62,7 @@
 			%>
 			<form action="QnAUpdateServlet" method="post">
 				<input type="hidden" name="qnaNo" value="<%=qna.getQnaNo()%>"><br>
-				<table border="1" style="width:90%; border-collapse:collapse; vertical-align: middle; margin-top:40px; margin-left:50px; margin-bottom:20px;">
+				<table border="1" id="detailTable">
 					<tr>
 						<th style="padding:15px;"> 제목 </th><td><input style="width:100%; border:none;" type="text" name="qnaTitle" size="13pt" value="<%=qna.getQnaTitle() %>"></td>
 					</tr>

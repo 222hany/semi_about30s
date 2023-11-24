@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+x<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="java.util.List" %>
@@ -61,7 +61,7 @@
 			QnADAO qnaDao = new QnADAO();
 			QnAVO qna = qnaDao.getQnaNo(qnaNo);
 		%>
-		<table border="1" style="width:90%; border-collapse:collapse; vertical-align: middle; margin-top:40px; margin-left:50px; margin-bottom:20px;">
+		<table border="1" id="detailTable">
 		<% if (qna != null) { %>
 			<tr>
 				<th>작성자</th><td style="width: 400px;"><%=qna.getAccountID() %></td>
